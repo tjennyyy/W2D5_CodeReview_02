@@ -1,8 +1,15 @@
-public class Exercise {
+
+    /*Create a Java class Exercise containing following parameters:
+    Exercise´s name, Description, Duration (in sec), Position (floor or standup)*/
+
+
+    public class Exercise {
+
     private String exerciseName;
     private String description;
     private int duration;
     private String position;
+
 
     public Exercise(String exerciseName, String description, int duration, String position){
         this.exerciseName = exerciseName;
@@ -36,14 +43,17 @@ public class Exercise {
     }
 
     public String getPosition(){
-        return position;
+        return this.position;
     }
 
     public void setPosition(String position){
         this.position = position;
     }
-    /*public void printDuration(){
-        System.out.println(""); } */
 
 
+    public void printExercise () {
+        System.out.println(this.exerciseName+ "            " + "DURATION:  " + this.duration + " seconds.");
+        System.out.println("----------------------------------------------");
+        System.out.println("DESCRIPTION: " + this.description+ "\n");
+    }
 }
